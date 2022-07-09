@@ -1,4 +1,4 @@
-FROM casjaysdev/alpine:latest as build
+FROM casjaysdevdocker/alpine:latest as build
 
 RUN apk update
 # set up nsswitch.conf for Go's "netgo" implementation
@@ -104,12 +104,12 @@ ARG BUILD_DATE="$(date +'%Y-%m-%d %H:%M')"
 LABEL \
   org.label-schema.name="golang" \
   org.label-schema.description="container to build go packages" \
-  org.label-schema.url="https://github.com/casjaysdev/golang" \
-  org.label-schema.vcs-url="https://github.com/casjaysdev/golang" \
+  org.label-schema.url="https://hub.docker.com/r/casjaysdevdocker/golang" \
+  org.label-schema.vcs-url="https://github.com/casjaysdevdocker/golang" \
   org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.version=$BUILD_DATE \
   org.label-schema.vcs-ref=$BUILD_DATE \
-  org.label-schema.license="MIT" \
+  org.label-schema.license="WTFPL" \
   org.label-schema.vcs-type="Git" \
   org.label-schema.schema-version="1.0" \
   org.label-schema.vendor="CasjaysDev" \
